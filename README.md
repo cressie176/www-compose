@@ -1,3 +1,6 @@
+# www-compose
+A [Docker Compose](https://docs.docker.com/compose/) project for deploying www.stephen-cresswell.net
+
 ## Running Locally
 
 ### Create the docker network
