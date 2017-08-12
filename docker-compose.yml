@@ -4,7 +4,7 @@ services:
 
   www-app-live:
     container_name: www-app-live
-    image: quay.io/cressie176/www-app:production
+    image: quay.io/cressie176/www-app:live
     command: ['node', '.']
     restart: always
     depends_on:
