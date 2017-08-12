@@ -9,7 +9,7 @@ services:
     restart: always
     depends_on:
       - www-nginx
-      # - www-mongo
+      - www-mongo
     environment:
       - APP_ENV=live
     volumes:
@@ -27,7 +27,7 @@ services:
     restart: always
     depends_on:
       - www-nginx
-      # - www-mongo
+      - www-mongo
     environment:
       - APP_ENV=stage
     volumes:
@@ -45,7 +45,7 @@ services:
     restart: always
     depends_on:
       - www-nginx
-    #   - www-mongo
+      - www-mongo
     environment:
       - APP_ENV=local
     volumes:
@@ -67,12 +67,12 @@ services:
       - 80:80
       - 443:443
 
-  # www-mongo:
-  #   container_name: www-mongo
-  #   image: mongo
-  #   restart: always
-  #   volumes:
-  #     - ${CONTAINERS_DIR}/mongo/data/db:/data/db
+  www-mongo:
+    container_name: www-mongo
+    image: mongo
+    restart: always
+    volumes:
+      - ${CONTAINERS_DIR}/mongo/data/db:/data/db
 
   www-jobs:
     container_name: www-jobs
