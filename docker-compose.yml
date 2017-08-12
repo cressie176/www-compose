@@ -13,7 +13,7 @@ services:
     environment:
       - APP_ENV=live
     volumes:
-      - ${CONTAINERS_DIR}/app-live/secrets:/opt/secrets
+      - ${CONTAINERS_DIR}/app-live/secrets:/opt/app/secrets
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:3000/__/status"]
       interval: $HEALTHCHECK_INTERVAL
@@ -31,7 +31,7 @@ services:
     environment:
       - APP_ENV=stage
     volumes:
-      - ${CONTAINERS_DIR}/app-stage/secrets:/opt/secrets
+      - ${CONTAINERS_DIR}/app-stage/secrets:/opt/app/secrets
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:3000/__/status"]
       interval: $HEALTHCHECK_INTERVAL
@@ -49,7 +49,7 @@ services:
     environment:
       - APP_ENV=local
     volumes:
-      - ${CONTAINERS_DIR}/www-app-local/secrets:/opt/secrets
+      - ${CONTAINERS_DIR}/www-app-local/secrets:/opt/app/secrets
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:3000/__/status"]
       interval: $HEALTHCHECK_INTERVAL
