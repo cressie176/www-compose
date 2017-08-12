@@ -33,6 +33,6 @@ sudo echo '127.0.0.1     local.stephen-cresswell.net' >> /etc/hosts
 
 ### Start
 ```bash
-docker-compose up --build -d www-app-local
+docker-compose up -d www-app-local
 ```
 
