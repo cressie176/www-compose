@@ -84,16 +84,16 @@ services:
       - ${CONTAINERS_DIR}/jobs/var/www/.well-known/acme-challenge:/var/www/.well-known/acme-challenge
       - ${CONTAINERS_DIR}/nginx/etc/nginx/ssl:/etc/nginx/ssl
 
- watchtower:
-   container_name: watchtower
-   restart: always
-   image: v2tec/watchtower
-   environment:
-     - REPO_USER=${REPO_USER}
-     - REPO_PASS=${REPO_PASS}
-   volumes:
-     - /var/run/docker.sock:/var/run/docker.sock
-   command: --interval 60 www-app-stage
+  watchtower:
+    container_name: watchtower
+    restart: always
+    image: v2tec/watchtower
+    environment:
+      - REPO_USER=${REPO_USER}
+      - REPO_PASS=${REPO_PASS}
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: --interval 60 www-app-stage
 
 networks:
   default:
