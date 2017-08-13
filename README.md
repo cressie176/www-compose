@@ -27,11 +27,13 @@ HEALTHCHECK_INTERVAL=1m
 HEALTHCHECK_TIMEOUT=5s
 HEALTHCHECK_RETRIES=3
 CONTAINERS_DIR=./containers
+REPO_USER=
+REPO_PASSWORD=
 ```
 
 ### Configure DNS
 ```
-sudo echo '127.0.0.1     local.stephen-cresswell.net' >> /etc/hosts 
+sudo echo '127.0.0.1     local.stephen-cresswell.net' >> /etc/hosts
 ```
 
 ### Start
