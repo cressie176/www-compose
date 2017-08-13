@@ -93,7 +93,7 @@ services:
       - REPO_PASS=${REPO_PASS}
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-    command: --interval 60 www-app-stage
+    command: --debug --interval 60 www-app-stage
 
 networks:
   default:
