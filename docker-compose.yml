@@ -40,7 +40,7 @@ services:
 
   www-app-local:
     container_name: www-app-local
-    image: quay.io/cressie176/www-app:latest
+    image: quay.io/cressie176/www-app:local
     command: ['node', '.']
     restart: always
     depends_on:
