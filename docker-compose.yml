@@ -68,6 +68,7 @@ services:
     restart: always
     volumes:
       - ${CONTAINERS_DIR}/nginx/etc/nginx/ssl:/etc/nginx/ssl
+      - ${CONTAINERS_DIR}/nginx/etc/nginx/cache:/etc/nginx/cache
       - ${CONTAINERS_DIR}/jobs/var/www/.well-known/acme-challenge:/var/www/.well-known/acme-challenge
     ports:
       - 80:80
