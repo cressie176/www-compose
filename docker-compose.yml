@@ -12,8 +12,9 @@ services:
       - www-mongo
     environment:
       - APP_ENV=live
-      - NEW_RELIC_AGENT_ENABLED=${NEW_RELIC_ENABLED}
+      - NEW_RELIC_AGENT_ENABLED=${NEW_RELIC_AGENT_ENABLED}
       - NEW_RELIC_LICENSE_KEY=${NEW_RELIC_LICENSE_KEY}
+      - NEW_RELIC_LOGGING_ENABLED=${NEW_RELIC_LOGGING_ENABLED}
     volumes:
       - ${CONTAINERS_DIR}/app-live/secrets:/opt/app/secrets
       - ${CONTAINERS_DIR}/content/data:/opt/app/server/content/data
@@ -34,8 +35,9 @@ services:
       - www-mongo
     environment:
       - APP_ENV=stage
-      - NEW_RELIC_AGENT_ENABLED=${NEW_RELIC_ENABLED}
+      - NEW_RELIC_AGENT_ENABLED=${NEW_RELIC_AGENT_ENABLED}
       - NEW_RELIC_LICENSE_KEY=${NEW_RELIC_LICENSE_KEY}
+      - NEW_RELIC_LOGGING_ENABLED=${NEW_RELIC_LOGGING_ENABLED}
     volumes:
       - ${CONTAINERS_DIR}/app-stage/secrets:/opt/app/secrets
       - ${CONTAINERS_DIR}/content/data:/opt/app/server/content/data
@@ -56,8 +58,9 @@ services:
       - www-mongo
     environment:
       - APP_ENV=local
-      - NEW_RELIC_AGENT_ENABLED=${NEW_RELIC_ENABLED}
+      - NEW_RELIC_AGENT_ENABLED=${NEW_RELIC_AGENT_ENABLED}
       - NEW_RELIC_LICENSE_KEY=${NEW_RELIC_LICENSE_KEY}
+      - NEW_RELIC_LOGGING_ENABLED=${NEW_RELIC_LOGGING_ENABLED}
     volumes:
       - ${CONTAINERS_DIR}/www-app-local/secrets:/opt/app/secrets
       - ${CONTAINERS_DIR}/content/data:/opt/app/server/content/data
